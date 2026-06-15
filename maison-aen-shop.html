@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAISON·ÆN — SS 2026 Collection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0a0a0a;--white:#f5f5f0;--gray:#888;--light:#e8e8e0;
+  --accent:#c8a96e;--card-bg:#f0f0eb;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--black);font-family:'Inter',sans-serif;font-weight:300;min-height:100vh}
+
+/* NAV */
+nav{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2.5rem;border-bottom:0.5px solid #ccc;position:sticky;top:0;background:var(--white);z-index:100}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;color:inherit}
+.nav-links{display:flex;gap:2rem;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray)}
+.nav-links a{text-decoration:none;color:var(--gray);transition:color 0.2s}
+.nav-links a:hover{color:var(--black)}
+.nav-right{display:flex;align-items:center;gap:1.5rem;font-size:11px;letter-spacing:0.1em}
+.cart-btn{cursor:pointer;display:flex;align-items:center;gap:6px;padding:8px 18px;border:0.5px solid var(--black);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.2s;text-decoration:none;color:inherit}
+.cart-btn:hover{background:var(--black);color:var(--white)}
+.cart-count{background:var(--black);color:var(--white);width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;transition:background 0.2s}
+.cart-btn:hover .cart-count{background:var(--white);color:var(--black)}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:500px}
+.hero-left{background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:3.5rem;position:relative;overflow:hidden}
+.hero-left::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,0.012) 40px,rgba(255,255,255,0.012) 41px);pointer-events:none}
+.hero-eyebrow{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:58px;font-weight:300;line-height:1.05;color:var(--white);margin-bottom:1.5rem}
+.hero-title em{font-style:italic;color:var(--accent)}
+.hero-sub{font-size:12px;letter-spacing:0.08em;color:#999;max-width:300px;line-height:2;margin-bottom:2.5rem}
+.hero-cta{display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:var(--black);padding:15px 30px;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:500;transition:opacity 0.2s;text-decoration:none;width:fit-content}
+.hero-cta:hover{opacity:0.85}
+.hero-right{background:var(--card-bg);display:flex;align-items:center;justify-content:center;padding:3rem;position:relative}
+.hero-product-visual{text-align:center}
+.hero-shirt-svg{width:200px;height:220px;margin-bottom:1.5rem}
+.hero-product-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;letter-spacing:0.1em}
+.hero-product-price{font-size:12px;color:var(--gray);margin-top:6px;letter-spacing:0.08em}
+.season-tag{position:absolute;top:2rem;right:2rem;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);writing-mode:vertical-rl}
+
+/* MARQUEE */
+.marquee-wrap{border-top:0.5px solid #ccc;border-bottom:0.5px solid #ccc;overflow:hidden;padding:10px 0;background:var(--black)}
+.marquee-inner{display:flex;gap:0;animation:marquee 22s linear infinite;white-space:nowrap}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.marquee-item{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);padding:0 2rem;opacity:0.8}
+.marquee-dot{color:#444}
+
+/* FILTERS */
+.filter-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 2.5rem;border-bottom:0.5px solid #ddd}
+.filter-tabs{display:flex;gap:0}
+.filter-tab{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:8px 22px;cursor:pointer;border:0.5px solid transparent;transition:all 0.2s;color:var(--gray)}
+.filter-tab.active,.filter-tab:hover{border-color:var(--black);color:var(--black)}
+.sort-select{font-size:11px;letter-spacing:0.08em;padding:8px 14px;border:0.5px solid #ccc;background:transparent;color:var(--gray);cursor:pointer;outline:none;font-family:'Inter',sans-serif}
+
+/* PRODUCTS */
+.products-section{padding:2.5rem}
+.section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:2rem}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;letter-spacing:0.05em}
+.section-count{font-size:11px;color:var(--gray);letter-spacing:0.08em}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ddd}
+@media(max-width:768px){.product-grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.hero-right{display:none}}
+.product-card{background:var(--white);cursor:pointer;position:relative;overflow:hidden;transition:all 0.3s}
+.product-card:hover .product-img-area{background:var(--black)}
+.product-card:hover .shirt-svg-el path,.product-card:hover .shirt-svg-el text{stroke:#f5f5f0;fill:#f5f5f0}
+.product-card:hover .hoodie-svg-el path,.product-card:hover .hoodie-svg-el line,.product-card:hover .hoodie-svg-el text{stroke:#f5f5f0;fill:#f5f5f0}
+.product-img-area{background:var(--card-bg);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;transition:background 0.3s;position:relative}
+.product-badge{position:absolute;top:1rem;left:1rem;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;padding:4px 10px}
+.badge-new{background:var(--black);color:var(--white)}
+.badge-limited{background:var(--accent);color:var(--black)}
+.badge-sale{background:#b83030;color:var(--white)}
+.product-quick-add{position:absolute;bottom:0;left:0;right:0;background:var(--black);color:var(--white);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;padding:12px;text-align:center;transform:translateY(100%);transition:transform 0.25s;cursor:pointer}
+.product-card:hover .product-quick-add{transform:translateY(0)}
+.product-info{padding:1rem 1.25rem}
+.product-category{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-bottom:4px}
+.product-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:300;margin-bottom:8px;letter-spacing:0.03em}
+.product-price-row{display:flex;align-items:center;gap:10px}
+.product-price{font-size:13px;letter-spacing:0.05em}
+.product-price-old{font-size:12px;color:var(--gray);text-decoration:line-through}
+.product-colors{display:flex;gap:5px;margin-top:10px}
+.color-dot{width:10px;height:10px;border-radius:50%;border:0.5px solid #bbb}
+
+/* LOOKBOOK */
+.lookbook{padding:3.5rem 2.5rem;border-top:0.5px solid #ddd;background:var(--card-bg)}
+.lookbook-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;letter-spacing:0.05em;margin-bottom:2rem}
+.lookbook-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1px;background:#bbb;max-height:400px}
+.lookbook-cell{background:var(--black);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;min-height:180px}
+.lookbook-cell:first-child{grid-row:span 2}
+.lookbook-label{position:absolute;bottom:1rem;left:1rem;font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:rgba(255,255,255,0.6)}
+
+/* NEWSLETTER */
+.newsletter{border-top:0.5px solid #ddd;border-bottom:0.5px solid #ddd;padding:3.5rem 2.5rem;text-align:center}
+.newsletter-eyebrow{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gray);margin-bottom:1rem}
+.newsletter-title{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;letter-spacing:0.05em;margin-bottom:1rem}
+.newsletter-sub{font-size:12px;color:var(--gray);letter-spacing:0.08em;margin-bottom:2rem}
+.newsletter-form{display:flex;gap:0;max-width:480px;margin:0 auto}
+.newsletter-input{flex:1;padding:14px 20px;border:0.5px solid var(--black);background:transparent;font-size:12px;letter-spacing:0.08em;outline:none;font-family:'Inter',sans-serif}
+.newsletter-submit{padding:14px 28px;background:var(--black);color:var(--white);border:none;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.2s}
+.newsletter-submit:hover{background:#333}
+
+/* FOOTER */
+.site-footer{border-top:0.5px solid #ddd;padding:3rem 2.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem;font-size:11px;letter-spacing:0.08em}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:0.15em;margin-bottom:0.75rem}
+.footer-tagline{font-size:10px;color:var(--gray);letter-spacing:0.12em;text-transform:uppercase}
+.footer-col-title{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-bottom:1rem}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{text-decoration:none;color:var(--black);transition:color 0.2s}
+.footer-links a:hover{color:var(--gray)}
+.footer-bottom{border-top:0.5px solid #ddd;padding:1.5rem 2.5rem;display:flex;justify-content:space-between;font-size:10px;color:var(--gray);letter-spacing:0.08em}
+
+/* TOAST */
+.toast{position:fixed;bottom:2.5rem;right:2.5rem;background:var(--black);color:var(--white);padding:14px 28px;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;opacity:0;transition:opacity 0.3s;pointer-events:none;z-index:9999}
+.toast.show{opacity:1}
+
+/* CART DRAWER */
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.4);opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:200}
+.cart-overlay.open{opacity:1;pointer-events:all}
+.cart-drawer{position:fixed;right:0;top:0;bottom:0;width:380px;background:var(--white);border-left:0.5px solid #ddd;transform:translateX(100%);transition:transform 0.35s;z-index:201;display:flex;flex-direction:column}
+.cart-drawer.open{transform:translateX(0)}
+.cart-header{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 1.5rem;border-bottom:0.5px solid #ddd}
+.cart-header-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;letter-spacing:0.1em}
+.cart-close{cursor:pointer;font-size:20px;color:var(--gray);line-height:1;border:none;background:none}
+.cart-items{flex:1;overflow-y:auto;padding:1.5rem}
+.cart-item{display:flex;gap:1rem;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:0.5px solid #eee;align-items:flex-start}
+.cart-item-img{width:64px;height:80px;background:var(--card-bg);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.cart-item-info{flex:1}
+.cart-item-name{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;margin-bottom:4px}
+.cart-item-price{font-size:12px;color:var(--gray);letter-spacing:0.05em}
+.cart-item-remove{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);cursor:pointer;border:none;background:none;padding:0;margin-top:6px;font-family:'Inter',sans-serif}
+.cart-empty{text-align:center;padding:3rem 0;font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:var(--gray)}
+.cart-footer{border-top:0.5px solid #ddd;padding:1.5rem}
+.cart-subtotal{display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.08em;margin-bottom:1.5rem;text-transform:uppercase}
+.checkout-btn{width:100%;padding:15px;background:var(--black);color:var(--white);border:none;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.2s}
+.checkout-btn:hover{background:#222}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">MAISON·ÆN</a>
+  <div class="nav-links">
+    <a href="#products" onclick="filterProducts('all')">Collection</a>
+    <a href="#products" onclick="filterProducts('tshirt')">Tops</a>
+    <a href="#products" onclick="filterProducts('hoodie')">Hoodies</a>
+    <a href="#lookbook">Lookbook</a>
+  </div>
+  <div class="nav-right">
+    <div class="cart-btn" onclick="openCart()" role="button" aria-label="カートを開く">
+      <i class="ti ti-shopping-bag" aria-hidden="true"></i>
+      <span>Cart</span>
+      <div class="cart-count" id="cartCount">0</div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">SS 2026 — Limited Drop</div>
+    <h1 class="hero-title">Elevated<br><em>Essentials</em></h1>
+    <p class="hero-sub">Uncompromising quality. Minimal form. Each piece crafted from 400gsm premium cotton, designed to outlast trends.</p>
+    <a href="#products" class="hero-cta">
+      <i class="ti ti-arrow-right" aria-hidden="true"></i>
+      Shop the Collection
+    </a>
+  </div>
+  <div class="hero-right">
+    <div class="season-tag">Spring · Summer · 2026</div>
+    <div class="hero-product-visual">
+      <svg class="hero-shirt-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M70 22 Q100 12 130 22 L162 52 L140 62 L140 192 H60 L60 62 L38 52 Z" stroke="#0a0a0a" stroke-width="1.5" fill="none"/>
+        <path d="M70 22 Q100 36 130 22" stroke="#0a0a0a" stroke-width="1.5" fill="none"/>
+        <line x1="75" y1="95" x2="125" y2="95" stroke="#c8a96e" stroke-width="0.8"/>
+        <text x="100" y="130" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="14" fill="#0a0a0a" letter-spacing="4">ÆN</text>
+      </svg>
+      <div class="hero-product-name">Signature Tee — Noir</div>
+      <div class="hero-product-price">¥ 28,000</div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-inner" id="marqueeInner"></div>
+</div>
+
+<div class="filter-bar" id="products">
+  <div class="filter-tabs" role="tablist">
+    <button class="filter-tab active" id="tab-all" onclick="filterProducts('all')" role="tab">All</button>
+    <button class="filter-tab" id="tab-tshirt" onclick="filterProducts('tshirt')" role="tab">T-Shirts</button>
+    <button class="filter-tab" id="tab-hoodie" onclick="filterProducts('hoodie')" role="tab">Hoodies</button>
+    <button class="filter-tab" id="tab-limited" onclick="filterProducts('limited')" role="tab">Limited</button>
+  </div>
+  <select class="sort-select" onchange="sortProducts(this.value)" aria-label="並び替え">
+    <option value="featured">Featured</option>
+    <option value="price-asc">Price: Low to High</option>
+    <option value="price-desc">Price: High to Low</option>
+    <option value="newest">Newest</option>
+  </select>
+</div>
+
+<section class="products-section">
+  <div class="section-header">
+    <h2 class="section-title">Current Collection</h2>
+    <div class="section-count" id="productCount">9 products</div>
+  </div>
+  <div class="product-grid" id="productGrid" role="list"></div>
+</section>
+
+<section class="lookbook" id="lookbook">
+  <h2 class="lookbook-title">Lookbook — SS 2026</h2>
+  <div class="lookbook-grid">
+    <div class="lookbook-cell" style="background:#0f0f0f">
+      <svg width="140" height="180" viewBox="0 0 120 160" fill="none">
+        <path d="M40 20 Q60 12 80 20 L100 45 L85 52 L85 140 H35 L35 52 L20 45 Z" stroke="rgba(200,169,110,0.5)" stroke-width="1.2" fill="rgba(200,169,110,0.04)"/>
+        <path d="M40 20 Q60 32 80 20" stroke="rgba(200,169,110,0.5)" stroke-width="1.2" fill="none"/>
+        <text x="60" y="100" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="9" fill="rgba(200,169,110,0.7)" letter-spacing="3">ÆN</text>
+      </svg>
+      <div class="lookbook-label">The Uniform</div>
+    </div>
+    <div class="lookbook-cell" style="background:#1a1a1a">
+      <svg width="90" height="110" viewBox="0 0 80 90" fill="none">
+        <path d="M15 10 Q40 5 65 10 L75 30 Q60 25 60 35 L60 80 H20 L20 35 Q20 25 5 30 Z" stroke="rgba(245,245,240,0.3)" stroke-width="1" fill="rgba(245,245,240,0.04)"/>
+        <path d="M30 10 Q40 18 50 10" stroke="rgba(245,245,240,0.3)" stroke-width="1" fill="none"/>
+      </svg>
+      <div class="lookbook-label">Oversized</div>
+    </div>
+    <div class="lookbook-cell" style="background:#222">
+      <svg width="100" height="100" viewBox="0 0 80 80" fill="none">
+        <circle cx="40" cy="40" r="32" stroke="rgba(200,169,110,0.35)" stroke-width="0.8" fill="none"/>
+        <text x="40" y="46" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="16" fill="rgba(245,245,240,0.5)" letter-spacing="2">ÆN</text>
+      </svg>
+      <div class="lookbook-label">Monogram</div>
+    </div>
+    <div class="lookbook-cell" style="background:#161616">
+      <svg width="100" height="100" viewBox="0 0 80 80" fill="none">
+        <rect x="8" y="8" width="64" height="64" stroke="rgba(245,245,240,0.2)" stroke-width="0.8" fill="none"/>
+        <rect x="20" y="20" width="40" height="40" stroke="rgba(200,169,110,0.4)" stroke-width="0.8" fill="none"/>
+        <text x="40" y="44" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="11" fill="rgba(200,169,110,0.65)">S/S</text>
+      </svg>
+      <div class="lookbook-label">Textured</div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="newsletter-eyebrow">Stay Connected</div>
+  <h2 class="newsletter-title">Join the Inner Circle</h2>
+  <p class="newsletter-sub">Early access to drops, exclusive lookbooks, and invitations to private events.</p>
+  <form class="newsletter-form" onsubmit="submitNewsletter(event)">
+    <input type="email" class="newsletter-input" placeholder="your@email.com" required aria-label="メールアドレス">
+    <button type="submit" class="newsletter-submit">Subscribe</button>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <div>
+    <div class="footer-brand">MAISON·ÆN</div>
+    <div class="footer-tagline">Tokyo · Paris · New York</div>
+  </div>
+  <div>
+    <div class="footer-col-title">Support</div>
+    <div class="footer-links">
+      <a href="#">Sizing Guide</a>
+      <a href="#">Shipping Policy</a>
+      <a href="#">Returns &amp; Exchanges</a>
+      <a href="#">Care Instructions</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+  <div>
+    <div class="footer-col-title">Brand</div>
+    <div class="footer-links">
+      <a href="#">About Maison Æn</a>
+      <a href="#">Sustainability</a>
+      <a href="#">Stockists</a>
+      <a href="#">Press</a>
+      <a href="#">Careers</a>
+    </div>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2026 Maison Æn. All rights reserved.</span>
+  <span>Privacy · Terms · Cookies</span>
+</div>
+
+<div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer" role="dialog" aria-label="ショッピングカート">
+  <div class="cart-header">
+    <div class="cart-header-title">Your Cart</div>
+    <button class="cart-close" onclick="closeCart()" aria-label="カートを閉じる">
+      <i class="ti ti-x"></i>
+    </button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">Your cart is empty</div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-subtotal">
+      <span>Subtotal</span>
+      <span id="cartSubtotal">¥ 0</span>
+    </div>
+    <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+  </div>
+</div>
+
+<script>
+const products = [
+  {id:1,name:'Archive Tee',category:'tshirt',price:28000,colors:['#0a0a0a','#f5f5f0','#c8a96e'],badge:'new',limited:false,order:0},
+  {id:2,name:'Phantom Hoodie',category:'hoodie',price:68000,colors:['#0a0a0a','#2a2a2a'],badge:'limited',limited:true,order:1},
+  {id:3,name:'Studio Tee',category:'tshirt',price:24000,colors:['#0a0a0a','#888'],badge:null,limited:false,order:2},
+  {id:4,name:'Oversized Hoodie',category:'hoodie',price:72000,colors:['#f5f5f0','#c8a96e'],badge:'new',limited:false,order:3},
+  {id:5,name:'Monogram Tee',category:'tshirt',price:32000,colors:['#0a0a0a'],badge:'limited',limited:true,order:4},
+  {id:6,name:'Utility Hoodie',category:'hoodie',price:65000,colors:['#555','#0a0a0a'],badge:null,limited:false,order:5},
+  {id:7,name:'Essential Tee',category:'tshirt',price:21000,oldPrice:28000,colors:['#f5f5f0','#0a0a0a','#888'],badge:'sale',limited:false,order:6},
+  {id:8,name:'Velour Hoodie',category:'hoodie',price:88000,colors:['#2a2a2a'],badge:'limited',limited:true,order:7},
+  {id:9,name:'Minimal Tee',category:'tshirt',price:26000,colors:['#f5f5f0','#c8a96e'],badge:null,limited:false,order:8},
+];
+
+let cart = [];
+let activeFilter = 'all';
+
+function getTshirtSVG(color){
+  const sw = color==='#f5f5f0'?'#0a0a0a':'#e8e8e0';
+  const tw = color==='#f5f5f0'?'#0a0a0a':'#c8c8b0';
+  return `<svg class="shirt-svg-el" width="120" height="140" viewBox="0 0 120 140" fill="none" aria-hidden="true">
+    <path d="M42 15 Q60 8 78 15 L100 40 L84 48 L84 125 H36 L36 48 L20 40 Z" stroke="${sw}" stroke-width="1.2" fill="${color}" fill-opacity="0.25"/>
+    <path d="M42 15 Q60 28 78 15" stroke="${sw}" stroke-width="1.2" fill="none"/>
+    <text x="60" y="88" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="10" fill="${tw}" letter-spacing="4" opacity="0.7">ÆN</text>
+  </svg>`;
+}
+
+function getHoodieSVG(color){
+  const sw = color==='#f5f5f0'?'#0a0a0a':'#e8e8e0';
+  const tw = color==='#f5f5f0'?'#0a0a0a':'#c8c8b0';
+  return `<svg class="hoodie-svg-el" width="120" height="140" viewBox="0 0 120 140" fill="none" aria-hidden="true">
+    <path d="M25 18 Q45 8 75 18 L105 45 Q90 38 88 50 L88 125 H32 L32 50 Q30 38 15 45 Z" stroke="${sw}" stroke-width="1.2" fill="${color}" fill-opacity="0.18"/>
+    <path d="M45 18 Q60 30 75 18 Q70 38 60 40 Q50 38 45 18Z" stroke="${sw}" stroke-width="1" fill="${color}" fill-opacity="0.28"/>
+    <line x1="52" y1="52" x2="68" y2="52" stroke="${sw}" stroke-width="0.8" opacity="0.45"/>
+    <text x="60" y="98" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="9" fill="${tw}" letter-spacing="3" opacity="0.6">ÆN</text>
+  </svg>`;
+}
+
+function renderProducts(list){
+  const grid = document.getElementById('productGrid');
+  document.getElementById('productCount').textContent = list.length + ' products';
+  if(!list.length){
+    grid.innerHTML = '<div style="grid-column:1/-1;padding:3rem;text-align:center;font-family:\'Cormorant Garamond\',serif;font-size:18px;font-weight:300;color:var(--gray)">No products found</div>';
+    return;
+  }
+  grid.innerHTML = list.map(p=>{
+    const svg = p.category==='tshirt'?getTshirtSVG(p.colors[0]):getHoodieSVG(p.colors[0]);
+    const dots = p.colors.map(c=>`<div class="color-dot" style="background:${c}" aria-hidden="true"></div>`).join('');
+    const badge = p.badge?`<div class="product-badge badge-${p.badge}">${p.badge}</div>`:'';
+    const oldPrice = p.oldPrice?`<span class="product-price-old">¥ ${p.oldPrice.toLocaleString()}</span>`:'';
+    return `<article class="product-card" role="listitem" onclick="addToCart(${p.id})">
+      <div class="product-img-area">
+        ${badge}${svg}
+        <div class="product-quick-add" role="button" aria-label="${p.name}をカートに追加">
+          <i class="ti ti-plus" aria-hidden="true"></i> Quick Add
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="product-category">${p.category==='tshirt'?'T-Shirt':'Hoodie'}</div>
+        <h3 class="product-name">${p.name}</h3>
+        <div class="product-price-row">
+          <span class="product-price">¥ ${p.price.toLocaleString()}</span>
+          ${oldPrice}
+        </div>
+        <div class="product-colors" aria-label="${p.colors.length}色展開">${dots}</div>
+      </div>
+    </article>`;
+  }).join('');
+}
+
+function filterProducts(type){
+  activeFilter = type;
+  document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));
+  const tab = document.getElementById('tab-'+type);
+  if(tab) tab.classList.add('active');
+  let list = [...products].sort((a,b)=>a.order-b.order);
+  if(type==='tshirt') list=list.filter(p=>p.category==='tshirt');
+  else if(type==='hoodie') list=list.filter(p=>p.category==='hoodie');
+  else if(type==='limited') list=list.filter(p=>p.limited);
+  renderProducts(list);
+}
+
+function sortProducts(val){
+  let list = [...products];
+  if(val==='price-asc') list.sort((a,b)=>a.price-b.price);
+  else if(val==='price-desc') list.sort((a,b)=>b.price-a.price);
+  else if(val==='newest') list.sort((a,b)=>b.order-a.order);
+  else list.sort((a,b)=>a.order-b.order);
+  if(activeFilter==='tshirt') list=list.filter(p=>p.category==='tshirt');
+  else if(activeFilter==='hoodie') list=list.filter(p=>p.category==='hoodie');
+  else if(activeFilter==='limited') list=list.filter(p=>p.limited);
+  renderProducts(list);
+}
+
+function addToCart(id){
+  const p = products.find(x=>x.id===id);
+  if(!p) return;
+  const existing = cart.find(x=>x.id===id);
+  if(existing) existing.qty++;
+  else cart.push({...p, qty:1});
+  updateCartUI();
+  showToast(p.name + ' — Added to Cart');
+}
+
+function removeFromCart(id){
+  cart = cart.filter(x=>x.id!==id);
+  updateCartUI();
+}
+
+function updateCartUI(){
+  const total = cart.reduce((s,x)=>s+x.qty,0);
+  document.getElementById('cartCount').textContent = total;
+  const itemsEl = document.getElementById('cartItems');
+  const footerEl = document.getElementById('cartFooter');
+  if(!cart.length){
+    itemsEl.innerHTML = '<div class="cart-empty">Your cart is empty</div>';
+    footerEl.style.display='none';
+    return;
+  }
+  footerEl.style.display='block';
+  const subtotal = cart.reduce((s,x)=>s+x.price*x.qty,0);
+  document.getElementById('cartSubtotal').textContent = '¥ ' + subtotal.toLocaleString();
+  itemsEl.innerHTML = cart.map(x=>`
+    <div class="cart-item">
+      <div class="cart-item-img">${x.category==='tshirt'?getTshirtSVG(x.colors[0]):getHoodieSVG(x.colors[0])}</div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${x.name}</div>
+        <div class="cart-item-price">¥ ${x.price.toLocaleString()} × ${x.qty}</div>
+        <button class="cart-item-remove" onclick="removeFromCart(${x.id})">Remove</button>
+      </div>
+    </div>`).join('');
+}
+
+function openCart(){
+  document.getElementById('cartOverlay').classList.add('open');
+  document.getElementById('cartDrawer').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeCart(){
+  document.getElementById('cartOverlay').classList.remove('open');
+  document.getElementById('cartDrawer').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function checkout(){
+  alert('チェックアウト機能は実装中です。\n合計: ' + document.getElementById('cartSubtotal').textContent);
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2400);
+}
+
+function submitNewsletter(e){
+  e.preventDefault();
+  showToast('Thank you — Welcome to the Inner Circle');
+  e.target.reset();
+}
+
+const marqueeItems = ['New Arrivals 2026','Free Shipping Over ¥30,000','400gsm Premium Cotton','Limited Drop — SS 2026','Worldwide Shipping','Sustainable Packaging','Made in Japan','Members Get Early Access'];
+const inner = document.getElementById('marqueeInner');
+[...marqueeItems,...marqueeItems].forEach(item=>{
+  inner.innerHTML += `<span class="marquee-item">${item}</span><span class="marquee-item marquee-dot">·</span>`;
+});
+
+filterProducts('all');
+</script>
+</body>
+</html>
