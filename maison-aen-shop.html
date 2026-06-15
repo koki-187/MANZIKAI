@@ -16,87 +16,150 @@
 <meta name="twitter:title" content="KODAIRA 卍会 — SS 2026 Collection">
 <meta name="twitter:description" content="400gsmプレミアムコットンのTシャツ・パーカー。小平発のハイブランド。">
 
+<!-- Favicon (SVG inline) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230a0a0a'/><text x='16' y='23' text-anchor='middle' font-size='14' fill='%23c8a96e' font-family='serif'>卍</text></svg>">
+
+<!-- JSON-LD 構造化データ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "KODAIRA 卍会",
+      "url": "https://koki-187.github.io/MANZIKAI/maison-aen-shop.html",
+      "foundingDate": "2026",
+      "address": {"@type": "PostalAddress", "addressLocality": "小平市", "addressRegion": "東京都", "addressCountry": "JP"}
+    },
+    {
+      "@type": "ItemList",
+      "name": "SS 2026 Collection",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"item":{"@type":"Product","name":"Archive Tee","offers":{"@type":"Offer","price":"28000","priceCurrency":"JPY","availability":"https://schema.org/InStock"}}},
+        {"@type":"ListItem","position":2,"item":{"@type":"Product","name":"Phantom Hoodie","offers":{"@type":"Offer","price":"68000","priceCurrency":"JPY","availability":"https://schema.org/LimitedAvailability"}}},
+        {"@type":"ListItem","position":3,"item":{"@type":"Product","name":"Studio Tee","offers":{"@type":"Offer","price":"24000","priceCurrency":"JPY","availability":"https://schema.org/InStock"}}},
+        {"@type":"ListItem","position":4,"item":{"@type":"Product","name":"Oversized Hoodie","offers":{"@type":"Offer","price":"72000","priceCurrency":"JPY","availability":"https://schema.org/InStock"}}},
+        {"@type":"ListItem","position":5,"item":{"@type":"Product","name":"Monogram Tee","offers":{"@type":"Offer","price":"32000","priceCurrency":"JPY","availability":"https://schema.org/LimitedAvailability"}}},
+        {"@type":"ListItem","position":6,"item":{"@type":"Product","name":"Utility Hoodie","offers":{"@type":"Offer","price":"65000","priceCurrency":"JPY","availability":"https://schema.org/InStock"}}},
+        {"@type":"ListItem","position":7,"item":{"@type":"Product","name":"Essential Tee","offers":{"@type":"Offer","price":"21000","priceCurrency":"JPY","availability":"https://schema.org/InStock"}}},
+        {"@type":"ListItem","position":8,"item":{"@type":"Product","name":"Velour Hoodie","offers":{"@type":"Offer","price":"88000","priceCurrency":"JPY","availability":"https://schema.org/LimitedAvailability"}}},
+        {"@type":"ListItem","position":9,"item":{"@type":"Product","name":"Minimal Tee","offers":{"@type":"Offer","price":"26000","priceCurrency":"JPY","availability":"https://schema.org/InStock"}}}
+      ]
+    }
+  ]
+}
+</script>
+
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap">
-
-<!-- Icons: バージョン固定 -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css">
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --black:#0a0a0a;--white:#f5f5f0;--gray:#666;--light:#e8e8e0;
-  --accent:#c8a96e;--card-bg:#f0f0eb;
+  --accent:#c8a96e;--card-bg:#f0f0eb;--trans:0.25s ease;
 }
 html{scroll-behavior:smooth}
 body{background:var(--white);color:var(--black);font-family:'Inter','Noto Sans JP',sans-serif;font-weight:300;min-height:100vh}
 
-/* NAV */
+/* ===== NAV ===== */
 nav{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2.5rem;border-bottom:0.5px solid #ccc;position:sticky;top:0;background:var(--white);z-index:100}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;letter-spacing:0.1em;text-decoration:none;color:inherit}
-.nav-links{display:flex;gap:2rem;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray)}
-.nav-links a{text-decoration:none;color:var(--gray);transition:color 0.2s}
+.nav-links{display:flex;gap:2rem;font-size:11px;letter-spacing:0.12em;text-transform:uppercase}
+.nav-links a{text-decoration:none;color:var(--gray);transition:color var(--trans)}
 .nav-links a:hover{color:var(--black)}
-.nav-right{display:flex;align-items:center}
-.cart-btn{cursor:pointer;display:flex;align-items:center;gap:6px;padding:8px 18px;border:0.5px solid var(--black);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;transition:all 0.2s;background:none;font-family:'Inter','Noto Sans JP',sans-serif;color:inherit}
-.cart-btn:hover{background:var(--black);color:var(--white)}
-.cart-count{background:var(--black);color:var(--white);width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;transition:background 0.2s}
-.cart-btn:hover .cart-count{background:var(--white);color:var(--black)}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.cart-btn{cursor:pointer;display:flex;align-items:center;gap:6px;padding:8px 18px;border:0.5px solid var(--black);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;transition:all var(--trans);background:none;font-family:'Inter','Noto Sans JP',sans-serif;color:inherit}
+.cart-btn:hover,.cart-btn:focus-visible{background:var(--black);color:var(--white);outline:none}
+.cart-count{background:var(--black);color:var(--white);width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;transition:background var(--trans)}
+.cart-btn:hover .cart-count,.cart-btn:focus-visible .cart-count{background:var(--white);color:var(--black)}
+.hamburger{display:none;border:none;background:none;cursor:pointer;padding:4px;color:var(--black)}
+@media(max-width:768px){
+  .hamburger{display:flex;align-items:center;justify-content:center}
+  .nav-links{display:none}
+}
 
-/* HERO */
+/* ===== MOBILE MENU ===== */
+.mobile-menu{position:fixed;inset:0;background:var(--black);z-index:150;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;opacity:0;pointer-events:none;transition:opacity var(--trans)}
+.mobile-menu.open{opacity:1;pointer-events:all}
+.mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;letter-spacing:0.1em;color:var(--white);text-decoration:none;transition:color var(--trans)}
+.mobile-menu a:hover{color:var(--accent)}
+.mobile-menu-close{position:absolute;top:1.5rem;right:2rem;border:none;background:none;cursor:pointer;color:var(--white);font-size:24px;padding:4px}
+.mobile-menu-brand{font-size:14px;letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;margin-bottom:1rem}
+
+/* ===== HERO ===== */
 .hero{display:grid;grid-template-columns:1fr 1fr;min-height:500px}
 .hero-left{background:var(--black);display:flex;flex-direction:column;justify-content:flex-end;padding:3.5rem;position:relative;overflow:hidden}
 .hero-left::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,0.012) 40px,rgba(255,255,255,0.012) 41px);pointer-events:none}
 .hero-eyebrow{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
 .hero-title{font-family:'Cormorant Garamond',serif;font-size:58px;font-weight:300;line-height:1.05;color:var(--white);margin-bottom:1.5rem}
 .hero-title em{font-style:italic;color:var(--accent)}
-.hero-sub{font-size:12px;letter-spacing:0.08em;color:#999;max-width:300px;line-height:2;margin-bottom:2.5rem}
-.hero-cta{display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:var(--black);padding:15px 30px;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:500;transition:opacity 0.2s;text-decoration:none;width:fit-content}
+.hero-sub{font-size:12px;letter-spacing:0.05em;color:#999;max-width:300px;line-height:2;margin-bottom:2.5rem}
+.hero-cta{display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:var(--black);padding:15px 30px;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:500;transition:opacity var(--trans);text-decoration:none;width:fit-content}
 .hero-cta:hover{opacity:0.85}
 .hero-right{background:var(--card-bg);display:flex;align-items:center;justify-content:center;padding:3rem;position:relative}
 .hero-product-visual{text-align:center}
-.hero-shirt-svg{width:200px;height:220px;margin-bottom:1.5rem}
+.hero-shirt-svg{width:200px;height:220px;margin-bottom:1.5rem;transition:transform 0.4s ease}
+.hero-right:hover .hero-shirt-svg{transform:scale(1.04)}
 .hero-product-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;letter-spacing:0.1em}
 .hero-product-price{font-size:12px;color:var(--gray);margin-top:6px;letter-spacing:0.08em}
 .season-tag{position:absolute;top:2rem;right:2rem;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);writing-mode:vertical-rl}
+@media(max-width:768px){.hero{grid-template-columns:1fr}.hero-right{display:none}}
 
-/* MARQUEE */
-.marquee-wrap{border-top:0.5px solid #ccc;border-bottom:0.5px solid #ccc;overflow:hidden;padding:10px 0;background:var(--black)}
-.marquee-inner{display:flex;gap:0;animation:marquee 22s linear infinite;white-space:nowrap}
+/* ===== MARQUEE ===== */
+.marquee-wrap{overflow:hidden;padding:10px 0;background:var(--black)}
+.marquee-inner{display:flex;animation:marquee 28s linear infinite;white-space:nowrap}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.marquee-item{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);padding:0 2rem;opacity:0.8;font-family:'Inter','Noto Sans JP',sans-serif}
+.marquee-item{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);padding:0 2rem;opacity:0.8}
 .marquee-dot{color:#444}
 
-/* FILTERS */
-.filter-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 2.5rem;border-bottom:0.5px solid #ddd}
-.filter-tabs{display:flex;gap:0;role:tablist}
-.filter-tab{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:8px 22px;cursor:pointer;border:0.5px solid transparent;transition:all 0.2s;color:var(--gray);background:none;font-family:'Inter','Noto Sans JP',sans-serif}
+/* ===== FILTERS ===== */
+.filter-bar{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 2.5rem;border-bottom:0.5px solid #ddd;flex-wrap:wrap;gap:1rem}
+.filter-tabs{display:flex;gap:0}
+.filter-tab{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:8px 20px;cursor:pointer;border:0.5px solid transparent;transition:all var(--trans);color:var(--gray);background:none;font-family:'Inter','Noto Sans JP',sans-serif}
 .filter-tab.active,.filter-tab:hover,.filter-tab[aria-selected="true"]{border-color:var(--black);color:var(--black)}
-.sort-select{font-size:11px;letter-spacing:0.08em;padding:8px 14px;border:0.5px solid #ccc;background:transparent;color:var(--gray);cursor:pointer;outline:none;font-family:'Inter','Noto Sans JP',sans-serif}
+.sort-select{font-size:11px;padding:8px 14px;border:0.5px solid #ccc;background:transparent;color:var(--gray);cursor:pointer;outline:none;font-family:'Inter','Noto Sans JP',sans-serif}
 
-/* PRODUCTS */
+/* ===== SKELETON ===== */
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+.skeleton{background:linear-gradient(90deg,#e8e8e0 25%,#f0f0eb 50%,#e8e8e0 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:2px}
+.skeleton-card{background:var(--white)}
+.skeleton-img{aspect-ratio:3/4;width:100%}
+.skeleton-info{padding:1rem 1.25rem;display:flex;flex-direction:column;gap:8px}
+.skeleton-line{height:12px}
+.skeleton-line.w60{width:60%}
+.skeleton-line.w40{width:40%}
+
+/* ===== PRODUCTS ===== */
 .products-section{padding:2.5rem}
 .section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:2rem}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;letter-spacing:0.05em}
 .section-count{font-size:11px;color:var(--gray);letter-spacing:0.08em}
 .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ddd}
 @media(max-width:900px){.product-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:768px){.hero{grid-template-columns:1fr}.hero-right{display:none}}
 @media(max-width:480px){.product-grid{grid-template-columns:1fr}}
-.product-card{background:var(--white);position:relative;overflow:hidden;transition:all 0.3s}
+.product-card{background:var(--white);position:relative;overflow:hidden;transition:box-shadow var(--trans)}
+.product-card:focus-within{box-shadow:0 0 0 2px var(--accent)}
+.product-img-area{background:var(--card-bg);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;transition:background var(--trans);position:relative;overflow:hidden}
+.product-img-inner{transition:transform 0.4s ease}
+.product-card:hover .product-img-inner{transform:scale(1.05)}
 .product-card:hover .product-img-area{background:var(--black)}
 .product-card:hover .shirt-svg-el path,.product-card:hover .shirt-svg-el text{stroke:#f5f5f0;fill:#f5f5f0}
 .product-card:hover .hoodie-svg-el path,.product-card:hover .hoodie-svg-el line,.product-card:hover .hoodie-svg-el text{stroke:#f5f5f0;fill:#f5f5f0}
-.product-img-area{background:var(--card-bg);aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;transition:background 0.3s;position:relative}
-.product-badge{position:absolute;top:1rem;left:1rem;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;padding:4px 10px;pointer-events:none}
+.product-badge{position:absolute;top:1rem;left:1rem;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;padding:4px 10px;z-index:1;pointer-events:none}
 .badge-new{background:var(--black);color:var(--white)}
 .badge-limited{background:var(--accent);color:var(--black)}
 .badge-sale{background:#b83030;color:var(--white)}
-.product-quick-add{position:absolute;bottom:0;left:0;right:0;background:var(--black);color:var(--white);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;padding:12px;text-align:center;transform:translateY(100%);transition:transform 0.25s;cursor:pointer;border:none;width:100%;font-family:'Inter','Noto Sans JP',sans-serif}
-.product-card:hover .product-quick-add{transform:translateY(0)}
-.product-quick-add:focus-visible{transform:translateY(0);outline:2px solid var(--accent);outline-offset:-2px}
+.product-actions{position:absolute;bottom:0;left:0;right:0;display:flex;gap:1px;transform:translateY(100%);transition:transform var(--trans)}
+.product-card:hover .product-actions,.product-card:focus-within .product-actions{transform:translateY(0)}
+.product-quick-add{flex:1;background:var(--black);color:var(--white);font-size:10px;letter-spacing:0.15em;text-transform:uppercase;padding:12px 8px;text-align:center;cursor:pointer;border:none;font-family:'Inter','Noto Sans JP',sans-serif;transition:background var(--trans)}
+.product-quick-add:hover{background:#222}
+.product-detail-btn{width:44px;background:var(--accent);color:var(--black);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:opacity var(--trans)}
+.product-detail-btn:hover{opacity:0.85}
+.product-quick-add:focus-visible,.product-detail-btn:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 .product-info{padding:1rem 1.25rem}
 .product-category{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-bottom:4px}
 .product-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:300;margin-bottom:8px;letter-spacing:0.03em}
@@ -106,7 +169,43 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:1.2rem
 .product-colors{display:flex;gap:5px;margin-top:10px}
 .color-dot{width:10px;height:10px;border-radius:50%;border:0.5px solid #bbb}
 
-/* LOOKBOOK */
+/* fade-in on scroll */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* ===== PRODUCT DETAIL MODAL ===== */
+.detail-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:300;opacity:0;pointer-events:none;transition:opacity var(--trans)}
+.detail-overlay.open{opacity:1;pointer-events:all}
+.detail-modal{position:fixed;right:0;top:0;bottom:0;width:480px;max-width:100vw;background:var(--white);transform:translateX(100%);transition:transform 0.35s ease;z-index:301;display:flex;flex-direction:column;overflow-y:auto}
+.detail-modal.open{transform:translateX(0)}
+.detail-close{position:absolute;top:1.5rem;right:1.5rem;border:none;background:none;cursor:pointer;font-size:20px;color:var(--gray);z-index:1;padding:4px}
+.detail-img{background:var(--card-bg);display:flex;align-items:center;justify-content:center;min-height:300px;position:relative;flex-shrink:0}
+.detail-body{padding:2rem}
+.detail-category{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-bottom:0.5rem}
+.detail-name{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;letter-spacing:0.05em;margin-bottom:0.5rem}
+.detail-price{font-size:16px;letter-spacing:0.08em;margin-bottom:1.5rem}
+.detail-price-old{font-size:13px;color:var(--gray);text-decoration:line-through;margin-left:10px}
+.detail-divider{height:0.5px;background:#ddd;margin:1.5rem 0}
+.detail-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-bottom:0.75rem}
+.color-options{display:flex;gap:10px;margin-bottom:1.5rem}
+.color-opt{width:24px;height:24px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:border-color var(--trans);position:relative}
+.color-opt.selected{border-color:var(--black)}
+.color-opt::after{content:'';position:absolute;inset:2px;border-radius:50%}
+.size-options{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-bottom:1.5rem}
+.size-opt{padding:8px 4px;border:0.5px solid #ccc;font-size:11px;letter-spacing:0.05em;text-align:center;cursor:pointer;background:transparent;font-family:'Inter','Noto Sans JP',sans-serif;transition:all var(--trans);color:var(--gray)}
+.size-opt:hover{border-color:var(--black);color:var(--black)}
+.size-opt.selected{background:var(--black);color:var(--white);border-color:var(--black)}
+.size-opt.unavailable{opacity:0.3;cursor:not-allowed;text-decoration:line-through}
+.detail-qty{display:flex;align-items:center;gap:0;margin-bottom:2rem;border:0.5px solid #ccc;width:fit-content}
+.qty-btn{width:40px;height:40px;border:none;background:transparent;cursor:pointer;font-size:16px;transition:background var(--trans);font-family:'Inter',sans-serif}
+.qty-btn:hover{background:var(--light)}
+.qty-display{width:50px;text-align:center;font-size:14px;border-left:0.5px solid #ccc;border-right:0.5px solid #ccc;height:40px;display:flex;align-items:center;justify-content:center}
+.detail-add-btn{width:100%;padding:16px;background:var(--black);color:var(--white);border:none;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-family:'Inter','Noto Sans JP',sans-serif;transition:background var(--trans);margin-bottom:0.75rem}
+.detail-add-btn:hover{background:#222}
+.detail-add-btn:disabled{background:#ccc;cursor:not-allowed}
+.detail-care{font-size:11px;color:var(--gray);line-height:1.8;letter-spacing:0.05em}
+
+/* ===== LOOKBOOK ===== */
 .lookbook{padding:3.5rem 2.5rem;border-top:0.5px solid #ddd;background:var(--card-bg)}
 .lookbook-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;letter-spacing:0.05em;margin-bottom:2rem}
 .lookbook-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1px;background:#bbb;max-height:400px}
@@ -114,98 +213,127 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:1.2rem
 .lookbook-cell:first-child{grid-row:span 2}
 .lookbook-label{position:absolute;bottom:1rem;left:1rem;font-family:'Cormorant Garamond',serif;font-size:14px;font-style:italic;color:rgba(255,255,255,0.6)}
 
-/* NEWSLETTER */
+/* ===== NEWSLETTER ===== */
 .newsletter{border-top:0.5px solid #ddd;border-bottom:0.5px solid #ddd;padding:3.5rem 2.5rem;text-align:center}
 .newsletter-eyebrow{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gray);margin-bottom:1rem}
 .newsletter-title{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;letter-spacing:0.05em;margin-bottom:1rem}
-.newsletter-sub{font-size:12px;color:var(--gray);letter-spacing:0.08em;margin-bottom:2rem}
+.newsletter-sub{font-size:12px;color:var(--gray);letter-spacing:0.05em;margin-bottom:2rem;line-height:1.8}
 .newsletter-form{display:flex;gap:0;max-width:480px;margin:0 auto 1rem}
-.newsletter-input{flex:1;padding:14px 20px;border:0.5px solid var(--black);background:transparent;font-size:12px;letter-spacing:0.08em;outline:none;font-family:'Inter','Noto Sans JP',sans-serif}
-.newsletter-submit{padding:14px 28px;background:var(--black);color:var(--white);border:none;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-family:'Inter','Noto Sans JP',sans-serif;transition:background 0.2s}
+.newsletter-input{flex:1;padding:14px 20px;border:0.5px solid var(--black);background:transparent;font-size:12px;outline:none;font-family:'Inter','Noto Sans JP',sans-serif}
+.newsletter-submit{padding:14px 28px;background:var(--black);color:var(--white);border:none;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-family:'Inter','Noto Sans JP',sans-serif;transition:background var(--trans)}
 .newsletter-submit:hover{background:#333}
-.newsletter-privacy{font-size:10px;color:var(--gray);letter-spacing:0.06em}
-.newsletter-privacy a{color:var(--gray)}
+.newsletter-privacy{font-size:10px;color:var(--gray)}
+.newsletter-privacy a{color:var(--gray);text-underline-offset:2px}
 
-/* FOOTER */
-.site-footer{border-top:0.5px solid #ddd;padding:3rem 2.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem;font-size:11px;letter-spacing:0.08em}
-@media(max-width:600px){.site-footer{grid-template-columns:1fr}}
+/* ===== FOOTER ===== */
+footer{border-top:0.5px solid #ddd}
+.site-footer{padding:3rem 2.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem;font-size:11px;letter-spacing:0.08em}
+@media(max-width:600px){.site-footer{grid-template-columns:1fr;gap:2rem}}
 .footer-brand{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;letter-spacing:0.1em;margin-bottom:0.75rem}
 .footer-tagline{font-size:10px;color:var(--gray);letter-spacing:0.12em;text-transform:uppercase}
 .footer-col-title{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-bottom:1rem}
 .footer-links{display:flex;flex-direction:column;gap:10px}
-.footer-links a{text-decoration:none;color:var(--black);transition:color 0.2s}
+.footer-links a{text-decoration:none;color:var(--black);transition:color var(--trans)}
 .footer-links a:hover{color:var(--gray)}
-.footer-bottom{border-top:0.5px solid #ddd;padding:1.5rem 2.5rem;display:flex;justify-content:space-between;font-size:10px;color:var(--gray);letter-spacing:0.08em}
-@media(max-width:600px){.footer-bottom{flex-direction:column;gap:8px}}
+.footer-bottom{border-top:0.5px solid #ddd;padding:1.5rem 2.5rem;display:flex;justify-content:space-between;font-size:10px;color:var(--gray)}
+@media(max-width:480px){.footer-bottom{flex-direction:column;gap:8px}}
 
-/* TOAST */
+/* ===== TOAST ===== */
 .toast{position:fixed;bottom:2.5rem;right:2.5rem;background:var(--black);color:var(--white);padding:14px 28px;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;opacity:0;transition:opacity 0.3s;pointer-events:none;z-index:9999;max-width:calc(100vw - 3rem)}
 .toast.show{opacity:1}
 
-/* CHECKOUT NOTICE (alert代替) */
-.checkout-notice{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:300;align-items:center;justify-content:center}
+/* ===== CHECKOUT MODAL ===== */
+.checkout-notice{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:400;align-items:center;justify-content:center}
 .checkout-notice.open{display:flex}
 .checkout-notice-box{background:var(--white);padding:2.5rem;max-width:360px;width:90%;text-align:center}
 .checkout-notice-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;margin-bottom:1rem;letter-spacing:0.05em}
-.checkout-notice-sub{font-size:12px;color:var(--gray);line-height:1.8;margin-bottom:1.5rem;letter-spacing:0.05em}
-.checkout-notice-total{font-size:18px;letter-spacing:0.08em;margin-bottom:2rem}
+.checkout-notice-sub{font-size:12px;color:var(--gray);line-height:1.8;margin-bottom:1.5rem}
+.checkout-notice-total{font-size:20px;letter-spacing:0.08em;margin-bottom:2rem;font-family:'Cormorant Garamond',serif}
 .checkout-notice-close{width:100%;padding:12px;background:var(--black);color:var(--white);border:none;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-family:'Inter','Noto Sans JP',sans-serif}
 
-/* CART DRAWER */
+/* ===== CART DRAWER ===== */
 .cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.4);opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:200}
 .cart-overlay.open{opacity:1;pointer-events:all}
-.cart-drawer{position:fixed;right:0;top:0;bottom:0;width:380px;max-width:100vw;background:var(--white);border-left:0.5px solid #ddd;transform:translateX(100%);transition:transform 0.35s;z-index:201;display:flex;flex-direction:column}
+.cart-drawer{position:fixed;right:0;top:0;bottom:0;width:400px;max-width:100vw;background:var(--white);border-left:0.5px solid #ddd;transform:translateX(100%);transition:transform 0.35s;z-index:201;display:flex;flex-direction:column}
 .cart-drawer.open{transform:translateX(0)}
 .cart-header{display:flex;align-items:center;justify-content:space-between;padding:1.5rem;border-bottom:0.5px solid #ddd}
 .cart-header-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;letter-spacing:0.1em}
 .cart-close{cursor:pointer;font-size:20px;color:var(--gray);line-height:1;border:none;background:none;padding:4px}
-.cart-items{flex:1;overflow-y:auto;padding:1.5rem}
-.cart-item{display:flex;gap:1rem;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:0.5px solid #eee;align-items:flex-start}
-.cart-item-img{width:64px;height:80px;background:var(--card-bg);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.cart-items{flex:1;overflow-y:auto;padding:1.5rem;display:flex;flex-direction:column;gap:1.5rem}
+.cart-item{display:flex;gap:1rem;align-items:flex-start;padding-bottom:1.5rem;border-bottom:0.5px solid #eee}
+.cart-item:last-child{border-bottom:none;padding-bottom:0}
+.cart-item-img{width:64px;height:80px;background:var(--card-bg);flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .cart-item-info{flex:1}
-.cart-item-name{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;margin-bottom:4px}
-.cart-item-price{font-size:12px;color:var(--gray);letter-spacing:0.05em}
-.cart-item-remove{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);cursor:pointer;border:none;background:none;padding:0;margin-top:6px;font-family:'Inter','Noto Sans JP',sans-serif}
+.cart-item-name{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;margin-bottom:2px}
+.cart-item-meta{font-size:10px;color:var(--gray);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px}
+.cart-item-controls{display:flex;align-items:center;justify-content:space-between}
+.cart-item-qty{display:flex;align-items:center;border:0.5px solid #ccc}
+.cart-item-qty button{width:28px;height:28px;border:none;background:transparent;cursor:pointer;font-size:14px;font-family:'Inter',sans-serif;transition:background var(--trans)}
+.cart-item-qty button:hover{background:var(--light)}
+.cart-item-qty span{width:32px;text-align:center;font-size:12px;border-left:0.5px solid #ccc;border-right:0.5px solid #ccc;height:28px;line-height:28px}
+.cart-item-price{font-size:13px;letter-spacing:0.05em}
+.cart-item-remove{font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray);cursor:pointer;border:none;background:none;padding:0;font-family:'Inter','Noto Sans JP',sans-serif;margin-top:6px;display:block;text-decoration:underline;text-underline-offset:2px}
 .cart-empty{text-align:center;padding:3rem 0;font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:var(--gray)}
-.cart-footer{border-top:0.5px solid #ddd;padding:1.5rem}
-.cart-subtotal{display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.08em;margin-bottom:1.5rem;text-transform:uppercase}
-.checkout-btn{width:100%;padding:15px;background:var(--black);color:var(--white);border:none;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-family:'Inter','Noto Sans JP',sans-serif;transition:background 0.2s}
+.cart-footer-area{border-top:0.5px solid #ddd;padding:1.5rem}
+.cart-subtotal{display:flex;justify-content:space-between;font-size:12px;letter-spacing:0.08em;margin-bottom:0.5rem;text-transform:uppercase}
+.cart-tax{display:flex;justify-content:space-between;font-size:10px;color:var(--gray);margin-bottom:1.5rem}
+.checkout-btn{width:100%;padding:15px;background:var(--black);color:var(--white);border:none;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-family:'Inter','Noto Sans JP',sans-serif;transition:background var(--trans)}
 .checkout-btn:hover{background:#222}
+
+/* ===== BACK TO TOP ===== */
+.back-to-top{position:fixed;bottom:2.5rem;left:2.5rem;width:44px;height:44px;background:var(--black);color:var(--white);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;opacity:0;transition:opacity 0.3s,transform var(--trans);transform:translateY(10px);z-index:90}
+.back-to-top.visible{opacity:1;transform:translateY(0)}
+.back-to-top:hover{background:#222}
 </style>
 </head>
 <body>
 
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="ナビゲーション">
+  <button type="button" class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="メニューを閉じる">
+    <i class="ti ti-x" aria-hidden="true"></i>
+  </button>
+  <div class="mobile-menu-brand">KODAIRA 卍会</div>
+  <a href="#products" onclick="filterProducts('all');closeMobileMenu()">Collection</a>
+  <a href="#products" onclick="filterProducts('tshirt');closeMobileMenu()">T-Shirts</a>
+  <a href="#products" onclick="filterProducts('hoodie');closeMobileMenu()">Hoodies</a>
+  <a href="#lookbook" onclick="closeMobileMenu()">Lookbook</a>
+</div>
+
 <nav aria-label="メインナビゲーション">
   <a href="#" class="nav-logo">KODAIRA 卍会</a>
-  <div class="nav-links">
-    <a href="#products" onclick="filterProducts('all')">Collection</a>
-    <a href="#products" onclick="filterProducts('tshirt')">Tops</a>
-    <a href="#products" onclick="filterProducts('hoodie')">Hoodies</a>
-    <a href="#lookbook">Lookbook</a>
+  <div class="nav-links" role="list">
+    <a href="#products" onclick="filterProducts('all')" role="listitem">Collection</a>
+    <a href="#products" onclick="filterProducts('tshirt')" role="listitem">Tops</a>
+    <a href="#products" onclick="filterProducts('hoodie')" role="listitem">Hoodies</a>
+    <a href="#lookbook" role="listitem">Lookbook</a>
   </div>
   <div class="nav-right">
-    <button class="cart-btn" onclick="openCart()" aria-label="カートを開く（アイテム数: 0）" id="cartBtnEl">
+    <button type="button" class="cart-btn" onclick="openCart()" aria-label="カートを開く（0アイテム）" id="cartBtnEl">
       <i class="ti ti-shopping-bag" aria-hidden="true"></i>
-      <span aria-hidden="true">Cart</span>
+      <span aria-hidden="true" lang="en">Cart</span>
       <div class="cart-count" id="cartCount" aria-hidden="true">0</div>
+    </button>
+    <button type="button" class="hamburger" onclick="openMobileMenu()" aria-label="メニューを開く" aria-expanded="false" id="hamburgerBtn">
+      <i class="ti ti-menu-2" style="font-size:22px" aria-hidden="true"></i>
     </button>
   </div>
 </nav>
 
 <main>
 
-<section class="hero" aria-label="ヒーロービジュアル">
+<section class="hero" aria-label="メインビジュアル">
   <div class="hero-left">
-    <div class="hero-eyebrow" aria-hidden="true">SS 2026 — Limited Drop</div>
-    <h1 class="hero-title">Elevated<br><em>Essentials</em></h1>
+    <div class="hero-eyebrow" aria-hidden="true" lang="en">SS 2026 — Limited Drop</div>
+    <h1 class="hero-title"><span lang="en">Elevated<br><em>Essentials</em></span></h1>
     <p class="hero-sub">妥協なきクオリティ、ミニマルなフォルム。400gsmプレミアムコットンで仕上げた、小平発のハイブランド。</p>
     <a href="#products" class="hero-cta">
       <i class="ti ti-arrow-right" aria-hidden="true"></i>
-      Shop the Collection
+      <span lang="en">Shop the Collection</span>
     </a>
   </div>
   <div class="hero-right" aria-hidden="true">
-    <div class="season-tag">Spring · Summer · 2026</div>
+    <div class="season-tag" lang="en">Spring · Summer · 2026</div>
     <div class="hero-product-visual">
       <svg class="hero-shirt-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M70 22 Q100 12 130 22 L162 52 L140 62 L140 192 H60 L60 62 L38 52 Z" stroke="#0a0a0a" stroke-width="1.5" fill="none"/>
@@ -224,29 +352,29 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:1.2rem
 </div>
 
 <div class="filter-bar" id="products">
-  <div class="filter-tabs" role="tablist" aria-label="商品カテゴリ">
+  <div class="filter-tabs" role="tablist" aria-label="商品カテゴリフィルター">
     <button type="button" class="filter-tab active" id="tab-all" onclick="filterProducts('all')" role="tab" aria-selected="true" aria-controls="productGrid">All</button>
-    <button type="button" class="filter-tab" id="tab-tshirt" onclick="filterProducts('tshirt')" role="tab" aria-selected="false" aria-controls="productGrid">T-Shirts</button>
-    <button type="button" class="filter-tab" id="tab-hoodie" onclick="filterProducts('hoodie')" role="tab" aria-selected="false" aria-controls="productGrid">Hoodies</button>
+    <button type="button" class="filter-tab" id="tab-tshirt" onclick="filterProducts('tshirt')" role="tab" aria-selected="false" aria-controls="productGrid" lang="en">T-Shirts</button>
+    <button type="button" class="filter-tab" id="tab-hoodie" onclick="filterProducts('hoodie')" role="tab" aria-selected="false" aria-controls="productGrid" lang="en">Hoodies</button>
     <button type="button" class="filter-tab" id="tab-limited" onclick="filterProducts('limited')" role="tab" aria-selected="false" aria-controls="productGrid">Limited</button>
   </div>
   <select class="sort-select" onchange="sortProducts(this.value)" aria-label="並び替え">
-    <option value="featured">Featured</option>
-    <option value="price-asc">Price: Low to High</option>
-    <option value="price-desc">Price: High to Low</option>
-    <option value="newest">Newest</option>
+    <option value="featured">おすすめ順</option>
+    <option value="price-asc">価格: 安い順</option>
+    <option value="price-desc">価格: 高い順</option>
+    <option value="newest">新着順</option>
   </select>
 </div>
 
 <section class="products-section" aria-label="商品一覧">
   <div class="section-header">
     <h2 class="section-title">Current Collection</h2>
-    <div class="section-count" id="productCount" aria-live="polite">9 products</div>
+    <div class="section-count" id="productCount" aria-live="polite" aria-atomic="true">9 products</div>
   </div>
   <div class="product-grid" id="productGrid" role="list" aria-label="商品グリッド"></div>
 </section>
 
-<section class="lookbook" id="lookbook" aria-label="ルックブック">
+<section class="lookbook fade-in" id="lookbook" aria-label="ルックブック">
   <h2 class="lookbook-title">Lookbook — SS 2026</h2>
   <div class="lookbook-grid" aria-hidden="true">
     <div class="lookbook-cell" style="background:#0f0f0f">
@@ -275,52 +403,54 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:1.2rem
       <svg width="100" height="100" viewBox="0 0 80 80" fill="none" aria-hidden="true">
         <rect x="8" y="8" width="64" height="64" stroke="rgba(245,245,240,0.2)" stroke-width="0.8" fill="none"/>
         <rect x="20" y="20" width="40" height="40" stroke="rgba(200,169,110,0.4)" stroke-width="0.8" fill="none"/>
-        <text x="40" y="44" text-anchor="middle" font-family="'Inter',sans-serif" font-size="11" fill="rgba(200,169,110,0.65)">S/S</text>
+        <text x="40" y="44" text-anchor="middle" font-family="'Inter',sans-serif" font-size="11" fill="rgba(200,169,110,0.65)" lang="en">S/S</text>
       </svg>
       <div class="lookbook-label">Textured</div>
     </div>
   </div>
 </section>
 
-<section class="newsletter" aria-label="ニュースレター登録">
+<section class="newsletter fade-in" aria-label="ニュースレター登録">
   <div class="newsletter-eyebrow">Stay Connected</div>
   <h2 class="newsletter-title">Join the Inner Circle</h2>
-  <p class="newsletter-sub">新作の先行アクセス、限定ルックブック、プライベートイベントのご案内をお届けします。</p>
+  <p class="newsletter-sub">新作の先行アクセス、限定ルックブック、<br>プライベートイベントのご案内をお届けします。</p>
   <form class="newsletter-form" onsubmit="submitNewsletter(event)" novalidate>
     <input type="email" class="newsletter-input" placeholder="your@email.com" required aria-label="メールアドレス">
-    <button type="submit" class="newsletter-submit">Subscribe</button>
+    <button type="submit" class="newsletter-submit" lang="en">Subscribe</button>
   </form>
-  <p class="newsletter-privacy">ご登録により<a href="#">プライバシーポリシー</a>に同意されたものとみなします。</p>
+  <p class="newsletter-privacy">ご登録により<a href="javascript:void(0)">プライバシーポリシー</a>に同意されたものとみなします。</p>
 </section>
 
 </main>
 
-<footer class="site-footer" aria-label="フッター">
-  <div>
-    <div class="footer-brand">KODAIRA 卍会</div>
-    <div class="footer-tagline">Kodaira, Tokyo · Est. 2026</div>
+<footer aria-label="サイトフッター">
+  <div class="site-footer">
+    <div>
+      <div class="footer-brand">KODAIRA 卍会</div>
+      <div class="footer-tagline">Kodaira, Tokyo · Est. 2026</div>
+    </div>
+    <div>
+      <div class="footer-col-title">サポート</div>
+      <nav class="footer-links" aria-label="サポートリンク">
+        <a href="javascript:void(0)">サイズガイド</a>
+        <a href="javascript:void(0)">送料・配送について</a>
+        <a href="javascript:void(0)">返品・交換ポリシー</a>
+        <a href="javascript:void(0)">お手入れ方法</a>
+        <a href="javascript:void(0)">お問い合わせ</a>
+      </nav>
+    </div>
+    <div>
+      <div class="footer-col-title">ブランド</div>
+      <nav class="footer-links" aria-label="ブランドリンク">
+        <a href="javascript:void(0)">KODAIRA 卍会 について</a>
+        <a href="javascript:void(0)">サステナビリティ</a>
+        <a href="javascript:void(0)">取扱店舗</a>
+        <a href="javascript:void(0)">プレス</a>
+        <a href="javascript:void(0)">採用情報</a>
+      </nav>
+    </div>
   </div>
-  <div>
-    <div class="footer-col-title">Support</div>
-    <nav class="footer-links" aria-label="サポートリンク">
-      <a href="#">サイズガイド</a>
-      <a href="#">送料・配送について</a>
-      <a href="#">返品・交換ポリシー</a>
-      <a href="#">お手入れ方法</a>
-      <a href="#">お問い合わせ</a>
-    </nav>
-  </div>
-  <div>
-    <div class="footer-col-title">Brand</div>
-    <nav class="footer-links" aria-label="ブランドリンク">
-      <a href="#">KODAIRA 卍会 について</a>
-      <a href="#">サステナビリティ</a>
-      <a href="#">取扱店舗</a>
-      <a href="#">プレス</a>
-      <a href="#">採用情報</a>
-    </nav>
-  </div>
-  <div class="footer-bottom" style="grid-column:1/-1;border-top:0.5px solid #ddd;padding-top:1.5rem;display:flex;justify-content:space-between;font-size:10px;color:var(--gray);letter-spacing:0.08em">
+  <div class="footer-bottom">
     <span id="copyrightYear"></span>
     <span>プライバシーポリシー · 利用規約 · Cookie設定</span>
   </div>
@@ -328,13 +458,45 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:1.2rem
 
 <div class="toast" id="toast" role="alert" aria-live="polite" aria-atomic="true"></div>
 
-<!-- チェックアウト確認モーダル（alert代替） -->
+<button type="button" class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="ページトップへ戻る">
+  <i class="ti ti-arrow-up" aria-hidden="true"></i>
+</button>
+
+<!-- Product Detail Modal -->
+<div class="detail-overlay" id="detailOverlay" onclick="closeDetail()"></div>
+<div class="detail-modal" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="detailName">
+  <button type="button" class="detail-close" onclick="closeDetail()" aria-label="詳細を閉じる">
+    <i class="ti ti-x" aria-hidden="true"></i>
+  </button>
+  <div class="detail-img" id="detailImg" aria-hidden="true"></div>
+  <div class="detail-body">
+    <div class="detail-category" id="detailCategory"></div>
+    <div class="detail-name" id="detailName"></div>
+    <div class="detail-price" id="detailPrice"></div>
+    <div class="detail-divider"></div>
+    <div class="detail-label">カラー</div>
+    <div class="color-options" id="detailColors"></div>
+    <div class="detail-label">サイズ</div>
+    <div class="size-options" id="detailSizes"></div>
+    <div class="detail-label">数量</div>
+    <div class="detail-qty">
+      <button type="button" class="qty-btn" onclick="changeQty(-1)" aria-label="数量を減らす">−</button>
+      <div class="qty-display" id="detailQtyDisplay">1</div>
+      <button type="button" class="qty-btn" onclick="changeQty(1)" aria-label="数量を増やす">+</button>
+    </div>
+    <button type="button" class="detail-add-btn" id="detailAddBtn" onclick="addFromDetail()">カートに追加</button>
+    <div class="detail-divider"></div>
+    <p class="detail-care">素材: 400gsm プレミアムコットン 100%<br>生産国: 日本製<br>お手入れ: 30°C以下 手洗い推奨</p>
+  </div>
+</div>
+
+<!-- Checkout Modal -->
 <div class="checkout-notice" id="checkoutNotice" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
   <div class="checkout-notice-box">
     <h3 class="checkout-notice-title" id="checkoutTitle">Order Summary</h3>
-    <p class="checkout-notice-sub">チェックアウト機能は現在準備中です。<br>近日公開予定です。</p>
+    <p class="checkout-notice-sub">チェックアウト機能は現在準備中です。<br>近日公開予定となっております。</p>
     <div class="checkout-notice-total" id="checkoutTotal"></div>
-    <button type="button" class="checkout-notice-close" onclick="closeCheckoutNotice()">Close</button>
+    <button type="button" class="checkout-notice-close" onclick="closeCheckoutNotice()">閉じる</button>
   </div>
 </div>
 
@@ -349,16 +511,20 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:1.2rem
   <div class="cart-items" id="cartItems">
     <div class="cart-empty">カートは空です</div>
   </div>
-  <div class="cart-footer" id="cartFooter" style="display:none">
+  <div class="cart-footer-area" id="cartFooter" style="display:none">
     <div class="cart-subtotal">
-      <span>Subtotal</span>
+      <span>小計</span>
       <span id="cartSubtotal">¥ 0</span>
     </div>
-    <button type="button" class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+    <div class="cart-tax">
+      <span>消費税(10%)込み</span>
+    </div>
+    <button type="button" class="checkout-btn" onclick="checkout()">チェックアウトへ進む</button>
   </div>
 </div>
 
 <script>
+const SIZES = ['XS','S','M','L','XL','XXL'];
 const products = [
   {id:1,name:'Archive Tee',category:'tshirt',price:28000,colors:['#0a0a0a','#f5f5f0','#c8a96e'],badge:'new',limited:false,order:0},
   {id:2,name:'Phantom Hoodie',category:'hoodie',price:68000,colors:['#0a0a0a','#2a2a2a'],badge:'limited',limited:true,order:1},
@@ -373,23 +539,29 @@ const products = [
 
 let cart = [];
 let activeFilter = 'all';
+let detailProduct = null;
+let detailColor = 0;
+let detailSize = null;
+let detailQty = 1;
 
 document.getElementById('copyrightYear').textContent = '© ' + new Date().getFullYear() + ' KODAIRA 卍会. All rights reserved.';
 
-function getTshirtSVG(color){
+function getTshirtSVG(color,size){
   const sw = color==='#f5f5f0'?'#0a0a0a':'#e8e8e0';
   const tw = color==='#f5f5f0'?'#0a0a0a':'#c8c8b0';
-  return `<svg class="shirt-svg-el" width="120" height="140" viewBox="0 0 120 140" fill="none" aria-hidden="true">
+  const s = size||120; const h = size ? Math.round(size*1.17) : 140;
+  return `<svg class="shirt-svg-el" width="${s}" height="${h}" viewBox="0 0 120 140" fill="none" aria-hidden="true">
     <path d="M42 15 Q60 8 78 15 L100 40 L84 48 L84 125 H36 L36 48 L20 40 Z" stroke="${sw}" stroke-width="1.2" fill="${color}" fill-opacity="0.25"/>
     <path d="M42 15 Q60 28 78 15" stroke="${sw}" stroke-width="1.2" fill="none"/>
     <text x="60" y="88" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="10" fill="${tw}" letter-spacing="2" opacity="0.7">卍会</text>
   </svg>`;
 }
 
-function getHoodieSVG(color){
+function getHoodieSVG(color,size){
   const sw = color==='#f5f5f0'?'#0a0a0a':'#e8e8e0';
   const tw = color==='#f5f5f0'?'#0a0a0a':'#c8c8b0';
-  return `<svg class="hoodie-svg-el" width="120" height="140" viewBox="0 0 120 140" fill="none" aria-hidden="true">
+  const s = size||120; const h = size ? Math.round(size*1.17) : 140;
+  return `<svg class="hoodie-svg-el" width="${s}" height="${h}" viewBox="0 0 120 140" fill="none" aria-hidden="true">
     <path d="M25 18 Q45 8 75 18 L105 45 Q90 38 88 50 L88 125 H32 L32 50 Q30 38 15 45 Z" stroke="${sw}" stroke-width="1.2" fill="${color}" fill-opacity="0.18"/>
     <path d="M45 18 Q60 30 75 18 Q70 38 60 40 Q50 38 45 18Z" stroke="${sw}" stroke-width="1" fill="${color}" fill-opacity="0.28"/>
     <line x1="52" y1="52" x2="68" y2="52" stroke="${sw}" stroke-width="0.8" opacity="0.45"/>
@@ -397,44 +569,66 @@ function getHoodieSVG(color){
   </svg>`;
 }
 
-function renderProducts(list){
+function getSVG(p,size){return p.category==='tshirt'?getTshirtSVG(p.colors[0],size):getHoodieSVG(p.colors[0],size);}
+
+function showSkeletons(count){
   const grid = document.getElementById('productGrid');
-  document.getElementById('productCount').textContent = list.length + ' products';
+  grid.innerHTML = Array(count).fill(0).map(()=>`
+    <div class="skeleton-card" aria-hidden="true">
+      <div class="skeleton skeleton-img"></div>
+      <div class="skeleton-info">
+        <div class="skeleton skeleton-line w40"></div>
+        <div class="skeleton skeleton-line"></div>
+        <div class="skeleton skeleton-line w60"></div>
+      </div>
+    </div>`).join('');
+}
+
+function renderProducts(list){
+  document.getElementById('productCount').textContent = list.length + ' items';
   if(!list.length){
-    grid.innerHTML = '<div style="grid-column:1/-1;padding:3rem;text-align:center;font-family:\'Cormorant Garamond\',serif;font-size:18px;font-weight:300;color:var(--gray)">該当する商品が見つかりません</div>';
+    document.getElementById('productGrid').innerHTML = '<div style="grid-column:1/-1;padding:3rem;text-align:center;font-family:\'Cormorant Garamond\',serif;font-size:18px;font-weight:300;color:var(--gray)">該当する商品がありません</div>';
     return;
   }
-  grid.innerHTML = list.map(p=>{
-    const svg = p.category==='tshirt'?getTshirtSVG(p.colors[0]):getHoodieSVG(p.colors[0]);
-    const dots = p.colors.map(c=>`<div class="color-dot" style="background:${c}" aria-hidden="true"></div>`).join('');
-    const badge = p.badge?`<div class="product-badge badge-${p.badge}" aria-label="${p.badge}">${p.badge}</div>`:'';
-    const oldPrice = p.oldPrice?`<span class="product-price-old" aria-label="定価 ¥ ${p.oldPrice.toLocaleString()}">¥ ${p.oldPrice.toLocaleString()}</span>`:'';
-    return `<article class="product-card" role="listitem">
-      <div class="product-img-area">
-        ${badge}${svg}
-        <button type="button" class="product-quick-add" onclick="addToCart(${p.id},event)" aria-label="${p.name}をカートに追加">
-          <i class="ti ti-plus" aria-hidden="true"></i> Quick Add
-        </button>
-      </div>
-      <div class="product-info">
-        <div class="product-category">${p.category==='tshirt'?'T-Shirt':'Hoodie'}</div>
-        <h3 class="product-name">${p.name}</h3>
-        <div class="product-price-row">
-          <span class="product-price">¥ ${p.price.toLocaleString()}</span>
-          ${oldPrice}
+  showSkeletons(list.length);
+  setTimeout(()=>{
+    document.getElementById('productGrid').innerHTML = list.map(p=>{
+      const svg = getSVG(p);
+      const dots = p.colors.map((c,i)=>`<div class="color-dot" style="background:${c}" aria-hidden="true"></div>`).join('');
+      const badge = p.badge?`<div class="product-badge badge-${p.badge}">${p.badge}</div>`:'';
+      const oldPrice = p.oldPrice?`<span class="product-price-old" aria-label="定価 ¥${p.oldPrice.toLocaleString()}">¥ ${p.oldPrice.toLocaleString()}</span>`:'';
+      return `<article class="product-card" role="listitem" tabindex="0"
+          onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openDetail(${p.id})}"
+          aria-label="${p.name} ¥${p.price.toLocaleString()}">
+        <div class="product-img-area">
+          ${badge}
+          <div class="product-img-inner">${svg}</div>
+          <div class="product-actions">
+            <button type="button" class="product-quick-add" onclick="quickAdd(${p.id},event)" aria-label="${p.name}をカートに追加">
+              <i class="ti ti-plus" aria-hidden="true"></i> Quick Add
+            </button>
+            <button type="button" class="product-detail-btn" onclick="openDetail(${p.id})" aria-label="${p.name}の詳細を見る">
+              <i class="ti ti-eye" aria-hidden="true"></i>
+            </button>
+          </div>
         </div>
-        <div class="product-colors" aria-label="${p.colors.length}色展開">${dots}</div>
-      </div>
-    </article>`;
-  }).join('');
+        <div class="product-info">
+          <div class="product-category">${p.category==='tshirt'?'T-Shirt':'Hoodie'}</div>
+          <h3 class="product-name">${p.name}</h3>
+          <div class="product-price-row">
+            <span class="product-price">¥ ${p.price.toLocaleString()}</span>
+            ${oldPrice}
+          </div>
+          <div class="product-colors" aria-label="${p.colors.length}色展開">${dots}</div>
+        </div>
+      </article>`;
+    }).join('');
+  }, 350);
 }
 
 function filterProducts(type){
   activeFilter = type;
-  document.querySelectorAll('.filter-tab').forEach(t=>{
-    t.classList.remove('active');
-    t.setAttribute('aria-selected','false');
-  });
+  document.querySelectorAll('.filter-tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false');});
   const tab = document.getElementById('tab-'+type);
   if(tab){tab.classList.add('active');tab.setAttribute('aria-selected','true');}
   let list = [...products].sort((a,b)=>a.order-b.order);
@@ -456,27 +650,104 @@ function sortProducts(val){
   renderProducts(list);
 }
 
-function addToCart(id, event){
+function quickAdd(id,event){
   if(event) event.stopPropagation();
   const p = products.find(x=>x.id===id);
   if(!p) return;
-  const existing = cart.find(x=>x.id===id);
-  if(existing) existing.qty++;
-  else cart.push({...p, qty:1});
-  updateCartUI();
+  addToCartCore(p, p.colors[0], 'M', 1);
   showToast(p.name + ' — カートに追加しました');
 }
 
-function removeFromCart(id){
-  cart = cart.filter(x=>x.id!==id);
+function openDetail(id){
+  const p = products.find(x=>x.id===id);
+  if(!p) return;
+  detailProduct = p;
+  detailColor = 0;
+  detailSize = null;
+  detailQty = 1;
+  document.getElementById('detailCategory').textContent = p.category==='tshirt'?'T-Shirt':'Hoodie';
+  document.getElementById('detailName').textContent = p.name;
+  const priceEl = document.getElementById('detailPrice');
+  priceEl.innerHTML = '¥ '+p.price.toLocaleString() + (p.oldPrice?`<span class="detail-price-old">¥ ${p.oldPrice.toLocaleString()}</span>`:'');
+  renderDetailImg();
+  renderDetailColors();
+  renderDetailSizes();
+  document.getElementById('detailQtyDisplay').textContent = detailQty;
+  document.getElementById('detailAddBtn').disabled = true;
+  document.getElementById('detailAddBtn').textContent = 'サイズを選択してください';
+  document.getElementById('detailOverlay').classList.add('open');
+  document.getElementById('detailModal').classList.add('open');
+  document.body.style.overflow='hidden';
+  document.querySelector('.detail-close').focus();
+}
+
+function renderDetailImg(){
+  if(!detailProduct) return;
+  const color = detailProduct.colors[detailColor];
+  const svg = detailProduct.category==='tshirt'?getTshirtSVG(color,180):getHoodieSVG(color,180);
+  document.getElementById('detailImg').innerHTML = svg;
+}
+
+function renderDetailColors(){
+  if(!detailProduct) return;
+  document.getElementById('detailColors').innerHTML = detailProduct.colors.map((c,i)=>`
+    <button type="button" class="color-opt${i===detailColor?' selected':''}" style="background:${c};border-color:${i===detailColor?'var(--black)':'transparent'}"
+      onclick="selectColor(${i})" aria-label="カラー${i+1}" aria-pressed="${i===detailColor}">
+    </button>`).join('');
+}
+
+function selectColor(i){
+  detailColor = i;
+  renderDetailImg();
+  renderDetailColors();
+}
+
+function renderDetailSizes(){
+  document.getElementById('detailSizes').innerHTML = SIZES.map(s=>`
+    <button type="button" class="size-opt${s===detailSize?' selected':''}" onclick="selectSize('${s}')" aria-pressed="${s===detailSize}">${s}</button>`).join('');
+}
+
+function selectSize(s){
+  detailSize = s;
+  renderDetailSizes();
+  const btn = document.getElementById('detailAddBtn');
+  btn.disabled = false;
+  btn.textContent = 'カートに追加';
+}
+
+function changeQty(delta){
+  detailQty = Math.max(1, Math.min(10, detailQty+delta));
+  document.getElementById('detailQtyDisplay').textContent = detailQty;
+}
+
+function addFromDetail(){
+  if(!detailProduct || !detailSize) return;
+  const color = detailProduct.colors[detailColor];
+  addToCartCore(detailProduct, color, detailSize, detailQty);
+  showToast(`${detailProduct.name} (${detailSize}) — カートに追加しました`);
+  closeDetail();
+}
+
+function addToCartCore(p, color, size, qty){
+  const key = p.id+'-'+color+'-'+size;
+  const existing = cart.find(x=>x.key===key);
+  if(existing) existing.qty+=qty;
+  else cart.push({...p, key, selectedColor:color, selectedSize:size, qty});
   updateCartUI();
+}
+
+function closeDetail(){
+  document.getElementById('detailOverlay').classList.remove('open');
+  document.getElementById('detailModal').classList.remove('open');
+  document.body.style.overflow='';
+  detailProduct = null;
 }
 
 function updateCartUI(){
   const total = cart.reduce((s,x)=>s+x.qty,0);
   document.getElementById('cartCount').textContent = total;
   const btn = document.getElementById('cartBtnEl');
-  if(btn) btn.setAttribute('aria-label','カートを開く（アイテム数: '+total+'）');
+  if(btn) btn.setAttribute('aria-label','カートを開く（'+total+'アイテム）');
   const itemsEl = document.getElementById('cartItems');
   const footerEl = document.getElementById('cartFooter');
   if(!cart.length){
@@ -486,23 +757,44 @@ function updateCartUI(){
   }
   footerEl.style.display='block';
   const subtotal = cart.reduce((s,x)=>s+x.price*x.qty,0);
-  document.getElementById('cartSubtotal').textContent = '¥ ' + subtotal.toLocaleString();
+  document.getElementById('cartSubtotal').textContent = '¥ '+subtotal.toLocaleString();
   itemsEl.innerHTML = cart.map(x=>`
     <div class="cart-item">
-      <div class="cart-item-img" aria-hidden="true">${x.category==='tshirt'?getTshirtSVG(x.colors[0]):getHoodieSVG(x.colors[0])}</div>
+      <div class="cart-item-img" aria-hidden="true">${x.category==='tshirt'?getTshirtSVG(x.selectedColor,52):getHoodieSVG(x.selectedColor,52)}</div>
       <div class="cart-item-info">
         <div class="cart-item-name">${x.name}</div>
-        <div class="cart-item-price">¥ ${x.price.toLocaleString()} × ${x.qty}</div>
-        <button type="button" class="cart-item-remove" onclick="removeFromCart(${x.id})" aria-label="${x.name}をカートから削除">Remove</button>
+        <div class="cart-item-meta" lang="en">${x.selectedSize}</div>
+        <div class="cart-item-controls">
+          <div class="cart-item-qty">
+            <button type="button" onclick="changeCartQty('${x.key}',-1)" aria-label="数量を減らす">−</button>
+            <span aria-label="数量 ${x.qty}">${x.qty}</span>
+            <button type="button" onclick="changeCartQty('${x.key}',1)" aria-label="数量を増やす">+</button>
+          </div>
+          <span class="cart-item-price">¥ ${(x.price*x.qty).toLocaleString()}</span>
+        </div>
+        <button type="button" class="cart-item-remove" onclick="removeFromCart('${x.key}')" aria-label="${x.name}をカートから削除">削除</button>
       </div>
     </div>`).join('');
 }
 
+function changeCartQty(key,delta){
+  const item = cart.find(x=>x.key===key);
+  if(!item) return;
+  item.qty = Math.max(1, Math.min(10, item.qty+delta));
+  updateCartUI();
+}
+
+function removeFromCart(key){
+  cart = cart.filter(x=>x.key!==key);
+  updateCartUI();
+}
+
 function openCart(){
+  closeDetail();
   document.getElementById('cartOverlay').classList.add('open');
   document.getElementById('cartDrawer').classList.add('open');
   document.body.style.overflow='hidden';
-  document.getElementById('cartDrawer').querySelector('button').focus();
+  document.querySelector('.cart-close').focus();
 }
 
 function closeCart(){
@@ -512,14 +804,26 @@ function closeCart(){
 }
 
 function checkout(){
-  const subtotal = document.getElementById('cartSubtotal').textContent;
-  document.getElementById('checkoutTotal').textContent = subtotal;
+  document.getElementById('checkoutTotal').textContent = document.getElementById('cartSubtotal').textContent;
   document.getElementById('checkoutNotice').classList.add('open');
-  document.querySelector('#checkoutNotice .checkout-notice-close').focus();
+  document.querySelector('.checkout-notice-close').focus();
 }
 
 function closeCheckoutNotice(){
   document.getElementById('checkoutNotice').classList.remove('open');
+}
+
+function openMobileMenu(){
+  document.getElementById('mobileMenu').classList.add('open');
+  document.getElementById('hamburgerBtn').setAttribute('aria-expanded','true');
+  document.body.style.overflow='hidden';
+  document.querySelector('.mobile-menu-close').focus();
+}
+
+function closeMobileMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburgerBtn').setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
 }
 
 function showToast(msg){
@@ -527,27 +831,42 @@ function showToast(msg){
   t.textContent = msg;
   t.classList.add('show');
   clearTimeout(t._timer);
-  t._timer = setTimeout(()=>t.classList.remove('show'), 2400);
+  t._timer = setTimeout(()=>t.classList.remove('show'), 2600);
 }
 
 function submitNewsletter(e){
   e.preventDefault();
-  showToast('ご登録ありがとうございます — Welcome to KODAIRA 卍会');
+  showToast('ご登録ありがとうございます — KODAIRA 卍会');
   e.target.reset();
 }
 
-document.addEventListener('keydown', e=>{
+function scrollToTop(){
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+document.addEventListener('keydown',e=>{
   if(e.key==='Escape'){
-    if(document.getElementById('cartDrawer').classList.contains('open')) closeCart();
-    if(document.getElementById('checkoutNotice').classList.contains('open')) closeCheckoutNotice();
+    if(document.getElementById('detailModal').classList.contains('open')) closeDetail();
+    else if(document.getElementById('cartDrawer').classList.contains('open')) closeCart();
+    else if(document.getElementById('checkoutNotice').classList.contains('open')) closeCheckoutNotice();
+    else if(document.getElementById('mobileMenu').classList.contains('open')) closeMobileMenu();
   }
 });
 
-const marqueeItems = ['新作入荷 SS 2026','¥30,000以上送料無料','400gsmプレミアムコットン','KODAIRA 卍会 Limited Drop','国内外配送対応','サステナブルパッケージ','Made in Japan','会員先行アクセス'];
-const inner = document.getElementById('marqueeInner');
-inner.innerHTML = [...marqueeItems,...marqueeItems].map(item=>
-  `<span class="marquee-item">${item}</span><span class="marquee-item marquee-dot">·</span>`
-).join('');
+window.addEventListener('scroll',()=>{
+  const btn = document.getElementById('backToTop');
+  if(window.scrollY>400) btn.classList.add('visible');
+  else btn.classList.remove('visible');
+});
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});
+},{threshold:0.15});
+document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+
+const marqueeItems = ['新作入荷 SS 2026','¥30,000以上 送料無料','400gsm プレミアムコットン','KODAIRA 卍会 Limited Drop','国内外配送対応','サステナブルパッケージ','Made in Japan','会員先行アクセス'];
+document.getElementById('marqueeInner').innerHTML = [...marqueeItems,...marqueeItems]
+  .map(item=>`<span class="marquee-item">${item}</span><span class="marquee-item marquee-dot">·</span>`).join('');
 
 filterProducts('all');
 </script>
